@@ -1,0 +1,6 @@
+name: CacheManager
+version: 1.0.0
+description: Manage all of your cache (CMS, Pagespeed, Redis, Cloudfront, etc)
+url: https://github.com/lesaff/statamic-cachemanager
+developer: Rudy Affandi
+developer_url: https://github.com/lesaff
