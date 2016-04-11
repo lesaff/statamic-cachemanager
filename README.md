@@ -2,6 +2,8 @@
 Cache Manager Widget for Statamic V2.x  
 by Rudy Affandi (2016)
 
+![screen shot 2016-04-11 at 2 10 17 pm](https://cloud.githubusercontent.com/assets/1151181/14435616/2ab8a1a4-ffef-11e5-8b38-99094c56b7f3.png)
+
 ## What is this?
 CacheManager is a Statamic V2.x dashboard widget that allows you to clear your cache/stache directly from the control panel. This is equivalent to the `php please cache:clear` command.
 
