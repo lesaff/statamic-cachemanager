@@ -73,7 +73,6 @@ class CacheManagerController extends Controller
      */
     public function clearCache()
     {
-        $addonName = $this->getAddonName();
 
         try {
             // Update feed
@@ -91,74 +90,71 @@ class CacheManagerController extends Controller
     }
 
 
-    /**
-     * Clear Statamic cache
-     * @return void
-     */
-    public function clearStaticCache()
-    {
-        $addonName = $this->getAddonName();
+    // /**
+    //  * Clear Statamic cache
+    //  * @return void
+    //  */
+    // public function clearStaticCache()
+    // {
 
-        try {
-            // Update feed
-            $this->cachemanager->clearStaticCache();
+    //     try {
+    //         // Update feed
+    //         $this->cachemanager->clearStaticCache();
 
-            // Log success returns
-            Log::info('Static page cache cleared successfully');
+    //         // Log success returns
+    //         Log::info('Static page cache cleared successfully');
 
-            // Return back to dashboard with success message
-            return back()->with('success', 'Static page cache cleared successfully');
-        } catch (Exception $e) {
-            Log::error('Problem clearing your Static page cache');
-            return back()->withErrors('error', ' Problem clearing your Static page cache' . $e);
-        }
-    }
-
-
-    /**
-     * Clear Pagespeed cache
-     * @return void
-     */
-    public function clearPageSpeed()
-    {
-        $addonName = $this->getAddonName();
-
-        try {
-            // Update feed
-            $this->cachemanager->clearPageSpeed();
-
-            // Log success returns
-            Log::info('Pagespeed cache cleared successfully');
-
-            // Return back to dashboard with success message
-            return back()->with('success', 'Pagespeed cache cleared successfully');
-        } catch (Exception $e) {
-            Log::error('Problem clearing your Pagespeed cache');
-            return back()->withErrors('error', ' Problem clearing your Pagespeed cache' . $e);
-        }
-    }
+    //         // Return back to dashboard with success message
+    //         return back()->with('success', 'Static page cache cleared successfully');
+    //     } catch (Exception $e) {
+    //         Log::error('Problem clearing your Static page cache');
+    //         return back()->withErrors('error', ' Problem clearing your Static page cache' . $e);
+    //     }
+    // }
 
 
-    /**
-     * Clear PHP OpCache cache
-     * @return void
-     */
-    public function clearOpCache()
-    {
-        $addonName = $this->getAddonName();
+    // /**
+    //  * Clear Pagespeed cache
+    //  * @return void
+    //  */
+    // public function clearPageSpeed()
+    // {
 
-        try {
-            // Update feed
-            $this->cachemanager->clearOpCache();
+    //     try {
+    //         // Update feed
+    //         $this->cachemanager->clearPageSpeed();
 
-            // Log success returns
-            Log::info('OPCache cleared successfully');
+    //         // Log success returns
+    //         Log::info('Pagespeed cache cleared successfully');
 
-            // Return back to dashboard with success message
-            return back()->with('success', 'OPCache cache cleared successfully');
-        } catch (Exception $e) {
-            Log::error('Problem clearing your OPCache cache');
-            return back()->withErrors('error', ' Problem clearing your OPCache cache' . $e);
-        }
-    }
+    //         // Return back to dashboard with success message
+    //         return back()->with('success', 'Pagespeed cache cleared successfully');
+    //     } catch (Exception $e) {
+    //         Log::error('Problem clearing your Pagespeed cache');
+    //         return back()->withErrors('error', ' Problem clearing your Pagespeed cache' . $e);
+    //     }
+    // }
+
+
+    // /**
+    //  * Clear PHP OpCache cache
+    //  * @return void
+    //  */
+    // public function clearOpCache()
+    // {
+
+    //     try {
+    //         // Update feed
+    //         $this->cachemanager->clearOpCache();
+
+    //         // Log success returns
+    //         Log::info('OPCache cleared successfully');
+
+    //         // Return back to dashboard with success message
+    //         return back()->with('success', 'OPCache cache cleared successfully');
+    //     } catch (Exception $e) {
+    //         Log::error('Problem clearing your OPCache cache');
+    //         return back()->withErrors('error', ' Problem clearing your OPCache cache' . $e);
+    //     }
+    // }
 }

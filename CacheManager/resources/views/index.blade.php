@@ -7,7 +7,7 @@
             </button>
             <ul class="dropdown-menu">
                 <li><a href="/{{ $cp_path }}/settings/cp"><span class="icon icon-browser" aria-hidden="true"></span> Widget Settings</a></li>
-                <li><a href="https://github.com/lesaff/statamic-cachemanager" target="_blank"><span class="icon icon-github" aria-hidden="true"></span> Github Page</a></li>
+                <li><a href="{{ $github_page }}" target="_blank"><span class="icon icon-github" aria-hidden="true"></span> Github Page</a></li>
             </ul>
         </div>
     </div>
