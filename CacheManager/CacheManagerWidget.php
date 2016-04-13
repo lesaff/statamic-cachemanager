@@ -30,6 +30,6 @@ class CacheManagerWidget extends Widget
         $github_page = $this->getMeta()['url'];
         $cp_path     = CP_ROUTE;
 
-        return $this->view('index', compact('settings', 'github_page', 'cp_path'))->render();
+        return $this->view('widget', compact('settings', 'github_page', 'cp_path'))->render();
     }
 }
