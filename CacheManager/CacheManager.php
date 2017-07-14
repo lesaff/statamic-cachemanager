@@ -8,9 +8,8 @@ use Statamic\API\Config;
 use Statamic\API\Content;
 use Statamic\API\Globals;
 use Statamic\API\Stache;
-use Statamic\Extend\Addon;
 
-class CacheManager extends Addon
+class CacheManager
 {
 
     /**
