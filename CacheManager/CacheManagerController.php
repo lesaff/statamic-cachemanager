@@ -7,36 +7,32 @@ use Log;
 
 class CacheManagerController extends Controller
 {
+    /** @var CacheManager */
+    private $cachemanager;
 
     /**
      * Initialize Aggregator functions
-     * @return mixed
      */
     protected function init()
     {
-        $this->cachemanager = new CacheManager;
+        $this->cachemanager = new CacheManager();
     }
-
 
     /**
      * Clear Statamic cache
-     * @return void
      */
     public function clearAll()
     {
-        $addonName = $this->getAddonName();
-
         try {
             // Update feed
             $this->cachemanager->clearCache();
-            $this->cachemanager->clearPageSpeed();
 
             // Log success returns
             Log::info('All cache cleared successfully');
 
             // Return back to dashboard with success message
             return back()->with('success', 'All cache cleared successfully');
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             Log::error('Problem clearing your cache');
             return back()->withErrors('error', ' Problem clearing your all/one of cache' . $e);
         }
@@ -45,12 +41,9 @@ class CacheManagerController extends Controller
 
     /**
      * Update Stache cache
-     * @return void
      */
     public function updateStache()
     {
-        $addonName = $this->getAddonName();
-
         try {
             // Update feed
             $this->cachemanager->updateStache();
@@ -60,7 +53,7 @@ class CacheManagerController extends Controller
 
             // Return back to dashboard with success message
             return back()->with('success', 'Stache updated successfully');
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             Log::error('Problem updating your stache');
             return back()->withErrors('error', ' Problem updating your stache' . $e);
         }
@@ -69,7 +62,6 @@ class CacheManagerController extends Controller
 
     /**
      * Clear Statamic cache
-     * @return void
      */
     public function clearCache()
     {
@@ -83,7 +75,7 @@ class CacheManagerController extends Controller
 
             // Return back to dashboard with success message
             return back()->with('success', 'Cache cleared successfully');
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             Log::error('Problem clearing your cache');
             return back()->withErrors('error', ' Problem clearing your cache' . $e);
         }

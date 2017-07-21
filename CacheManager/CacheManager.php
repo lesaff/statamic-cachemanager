@@ -2,11 +2,7 @@
 
 namespace Statamic\Addons\CacheManager;
 
-use Statamic\API\Assets;
 use Statamic\API\Cache;
-use Statamic\API\Config;
-use Statamic\API\Content;
-use Statamic\API\Globals;
 use Statamic\API\Stache;
 
 class CacheManager
@@ -14,20 +10,18 @@ class CacheManager
 
     /**
      * Update Stache
-     * @return void
      */
     public function updateStache()
     {
-        return Stache::update();
+        Stache::update();
     }
 
     /**
      * Clear cache
-     * @return void
      */
     public function clearCache()
     {
-        return Cache::clear();
+        Cache::clear();
     }
 
     // /**

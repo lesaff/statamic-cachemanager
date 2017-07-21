@@ -2,22 +2,10 @@
 
 namespace Statamic\Addons\CacheManager;
 
-use Statamic\API\Config;
 use Statamic\Extend\Widget;
 
 class CacheManagerWidget extends Widget
 {
-
-    /**
-     * Initialize CacheManager functions
-     * @return [type] [description]
-     */
-    protected function init()
-    {
-        $this->cachemanager = new CacheManager;
-    }
-
-
     /**
      * The HTML that should be shown in the widget
      *
@@ -26,9 +14,8 @@ class CacheManagerWidget extends Widget
     public function html()
     {
         // Get settings
-        $settings    = $this->getConfig();
         $github_page = $this->getMeta()['url'];
 
-        return $this->view('widget', compact('settings', 'github_page'))->render();
+        return $this->view('widget', compact('github_page'))->render();
     }
 }
