@@ -1,9 +1,12 @@
 routes:
   /: index
 
-  /clear-all: clearAll
-  /clear-cache: clearCache
-  /clear-opcache: clearOpCache
-  /clear-pagespeed: clearPageSpeed
-  /clear-static: clearStaticCache
-  /update-stache: updateStache
+  /clear-all:
+    uses: clearAll
+    as: cachemanager.clear-all
+  /clear-cache:
+    uses: clearCache
+    as: cachemanager.clear-cache
+  /update-stache:
+    uses: updateStache
+    as: cachemanager.update-stache
