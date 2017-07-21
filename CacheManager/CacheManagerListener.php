@@ -18,12 +18,10 @@ class CacheManagerListener extends Listener
 
     /**
      * Initialize Aggregator assets
-     * @return [type] [description]
+     * @return string
      */
     public function initCacheManager()
     {
-        $addon_css = $this->css->url('cachemanager.css');
-        $html = '<link rel="stylesheet" href="' . $addon_css . '">';
-        return $html;
+        return $this->css->tag('cachemanager.css');
     }
 }
