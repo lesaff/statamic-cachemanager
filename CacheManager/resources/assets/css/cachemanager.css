@@ -1,11 +1,3 @@
-.padding-top {
-    padding-top: 20px;
-}
-
-.padding-bottom {
-    padding-bottom: 20px;
-}
-
 #cachemanager .list {
     list-style-type: none;
     margin: 10px 0;
@@ -17,7 +9,6 @@
     padding: 0;
 }
 
-
 #cachemanager .list-separator li.border-top,
 #cachemanager .row-separator {
     border-top: 1px dotted #e0e0e0;
@@ -26,12 +17,6 @@
 }
 
 #cachemanager .list-separator li.first,
-#cachemanager .list-separator li:first,
-#cachemanager .list li:first,
 #cachemanager .list li.first {
     border-top: 0 !important;
-}
-
-.cursor-arrow {
-    cursor: default;
 }
