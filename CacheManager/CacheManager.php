@@ -23,4 +23,9 @@ class CacheManager
     {
         Cache::clear();
     }
+
+    public function clearGlide()
+    {
+        \Please::call('clear:glide');
+    }
 }
