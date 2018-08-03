@@ -80,4 +80,25 @@ class CacheManagerController extends Controller
             return back()->withErrors('error', ' Problem clearing your cache' . $e);
         }
     }
+
+
+    /**
+     * Clear Glide cache
+     */
+    public function clearGlide()
+    {
+
+        try {
+            $this->cachemanager->clearGlide();
+
+            // Log success returns
+            Log::info('Glide cache cleared successfully');
+
+            // Return back to dashboard with success message
+            return back()->with('success', 'Glide cache cleared successfully');
+        } catch (\Exception $e) {
+            Log::error('Problem clearing glide cache');
+            return back()->withErrors('error', ' Problem clearing glide cache' . $e);
+        }
+    }
 }

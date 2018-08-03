@@ -24,6 +24,11 @@
                 </tr>
                 <tr>
                     <td>
+                        <a href="{{ route('cachemanager.clear-glide') }}"><em class="icon icon-trash"></em> Clear Glide (image) cache</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <a href="{{ route('cachemanager.update-stache') }}"><em class="icon icon-cw"></em> Update Stache</a>
                     </td>
                 </tr>

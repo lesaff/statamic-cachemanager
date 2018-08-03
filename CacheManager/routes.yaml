@@ -10,3 +10,6 @@ routes:
   /update-stache:
     uses: updateStache
     as: cachemanager.update-stache
+  /clear-glide:
+    uses: clearGlide
+    as: cachemanager.clear-glide
